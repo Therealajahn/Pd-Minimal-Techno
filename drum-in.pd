@@ -1,4 +1,4 @@
-#N canvas 0 64 1366 679 12;
+#N canvas 82 175 1024 568 12;
 #X msg 220 380 127;
 #X obj 190 324 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
@@ -50,10 +50,15 @@
 #X msg 190 520 6;
 #X text 220 460 example: how to combine a number and word and route
 it using the word;
-#X text 266 549 number is passed into the message as the \$1 variable
+#X text 270 550 number is passed into the message as the \$1 variable
 ;
 #X text 517 272 1 pitch;
 #X text 648 271 2 pitch;
+#X obj 293 138 r \$1-drum-pitch;
+#X obj 292 244 *;
+#X obj 310 220 hradio 14 0 0 6 empty empty empty 0 -8 0 10 #fcfcfc
+#000000 #000000 5;
+#X floatatom 293 168 5 0 0 0 - - -, f 5;
 #X connect 0 0 13 1;
 #X connect 1 0 11 0;
 #X connect 2 0 1 0;
@@ -102,3 +107,9 @@ it using the word;
 #X connect 42 0 43 0;
 #X connect 44 0 42 0;
 #X connect 45 0 44 0;
+#X connect 50 0 53 0;
+#X connect 51 0 5 0;
+#X connect 51 0 1 0;
+#X connect 52 0 51 1;
+#X connect 53 0 51 0;
+#X coords 0 -1 1 1 165 24 1 232 215;

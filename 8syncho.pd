@@ -1,20 +1,20 @@
 #N canvas 683 64 683 679 12;
 #X obj 145 250 vradio 12 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000 1;
+#000000 #000000 0;
 #X obj 199 250 vradio 12 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000 1;
+#000000 #000000 0;
 #X obj 251 250 vradio 12 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000 3;
+#000000 #000000 0;
 #X obj 305 250 vradio 12 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000 2;
+#000000 #000000 0;
 #X obj 356 250 vradio 12 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000 3;
+#000000 #000000 0;
 #X obj 410 250 vradio 12 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000 2;
+#000000 #000000 0;
 #X obj 462 250 vradio 12 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000 1;
+#000000 #000000 0;
 #X obj 516 250 vradio 12 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000 1;
+#000000 #000000 0;
 #X obj 122 127 inlet;
 #X text 170 127 clock in;
 #X obj 300 100 count 8;
@@ -31,7 +31,7 @@
 #X obj 384 380 int;
 #X obj 412 380 int;
 #X obj 329 460 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000 3;
+#000000 #000000 0;
 #X obj 297 556 count;
 #X obj 329 480 + 1;
 #X floatatom 329 502 2 0 0 0 - - -, f 2;
@@ -39,7 +39,7 @@
 #X obj 330 585 select;
 #X obj 235 523 r \$0-metro;
 #X msg 329 528 divisor \$1;
-#X obj 370 150 outlet;
+#X obj 277 151 outlet;
 #X text 250 40 control main clock with bottom clock;
 #X text 424 207 deterine the amount of space between;
 #X text 554 227 ticks of the main;
@@ -59,6 +59,7 @@
 #X obj 550 120 - 1;
 #X obj 370 10 inlet;
 #X obj 400 100 f;
+#X obj 337 150 s \$1-master-syncho;
 #X connect 0 0 15 1;
 #X connect 1 0 16 1;
 #X connect 2 0 17 1;
@@ -71,6 +72,7 @@
 #X connect 10 0 11 0;
 #X connect 11 0 13 0;
 #X connect 11 0 31 0;
+#X connect 11 0 50 0;
 #X connect 12 0 10 0;
 #X connect 13 0 15 0;
 #X connect 13 1 16 0;

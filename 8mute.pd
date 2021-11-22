@@ -1,47 +1,50 @@
-#N canvas 683 64 683 679 12;
-#X floatatom 305 267 5 0 0 0 - - -, f 5;
+#N canvas 95 233 683 804 12;
+#X floatatom 305 262 5 0 0 0 - - -, f 5;
 #X obj 324 -231 inlet;
 #X text 340 -260 counter in;
-#X floatatom 244 -193 5 0 0 0 - - -, f 5;
-#X obj 305 307 outlet;
+#X floatatom 244 -113 5 0 0 0 - - -, f 5;
+#X obj 299 302 outlet;
 #X obj 244 -231 inlet;
-#X floatatom 324 -193 5 0 0 0 - - -, f 5;
+#X floatatom 324 -113 5 0 0 0 - - -, f 5;
 #X text 230 -260 note in;
-#X obj 97 200 spigot;
-#X obj 136 153 tgl 29 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 97 195 spigot;
+#X obj 136 152 tgl 29 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 1 1;
+#X obj 149 195 spigot;
+#X obj 188 152 tgl 29 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
-#X obj 149 200 spigot;
-#X obj 188 153 tgl 29 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 201 195 spigot;
+#X obj 240 152 tgl 29 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
-#X obj 201 200 spigot;
-#X obj 240 153 tgl 29 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 253 200 spigot;
-#X obj 292 153 tgl 29 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 307 200 spigot;
-#X obj 346 153 tgl 29 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 359 200 spigot;
-#X obj 398 153 tgl 29 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 411 200 spigot;
-#X obj 450 153 tgl 29 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 463 200 spigot;
-#X obj 502 153 tgl 29 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 232 -140 route 0 1 3 4 5 6 7;
-#X obj 282 -167 pack;
-#X text 390 -190 pair the counter # with the note number;
-#X text 390 -170 route each note to its repsective spigot \,;
-#X text 390 -150 which will only pass the number if toggled;
-#X text 390 -130 by the checkbox;
-#X obj 430 -70 r \$1-mute;
-#X obj 430 -30 print;
-#X obj 160 -230 r \$1-note;
-#X obj 390 -230 r \$1-counter;
+#X obj 253 195 spigot;
+#X obj 292 152 tgl 29 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 1 1;
+#X obj 307 195 spigot;
+#X obj 346 152 tgl 29 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 127 127;
+#X obj 359 195 spigot;
+#X obj 398 152 tgl 29 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 127 127;
+#X obj 411 195 spigot;
+#X obj 450 152 tgl 29 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 1 1;
+#X obj 463 195 spigot;
+#X obj 502 152 tgl 29 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 127;
+#X obj 232 -60 route 0 1 3 4 5 6 7;
+#X obj 282 -87 pack;
+#X text 390 -110 pair the counter # with the note number;
+#X text 390 -90 route each note to its repsective spigot \,;
+#X text 390 -70 which will only pass the number if toggled;
+#X text 390 -50 by the checkbox;
+#X obj 270 330 s \$1-drum-pitch;
+#X obj 123 -230 r 1-master-note;
+#X obj 370 -231 r 1-master-syncho;
+#X obj 80 -120 spigot;
+#X obj 430 50 r \$1-mute-control;
+#X obj 430 80 select 0 1 2 3 4 5 6 7;
 #X connect 0 0 4 0;
+#X connect 0 0 30 0;
 #X connect 1 0 3 0;
 #X connect 3 0 25 0;
 #X connect 5 0 6 0;
@@ -71,7 +74,15 @@
 #X connect 24 6 20 0;
 #X connect 24 7 22 0;
 #X connect 25 0 24 0;
-#X connect 30 0 31 0;
-#X connect 32 0 6 0;
-#X connect 33 0 3 0;
+#X connect 31 0 6 0;
+#X connect 32 0 3 0;
+#X connect 34 0 35 0;
+#X connect 35 0 9 0;
+#X connect 35 1 11 0;
+#X connect 35 2 13 0;
+#X connect 35 3 15 0;
+#X connect 35 4 17 0;
+#X connect 35 5 19 0;
+#X connect 35 6 21 0;
+#X connect 35 7 23 0;
 #X coords 0 -1 1 1 420 51 1 123 136;
